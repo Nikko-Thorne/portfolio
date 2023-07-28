@@ -1,25 +1,54 @@
-<!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nikko</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="hero-i">
-                <div class="hero-t">
-                    <h1>Hello, my name is Nikko</h1>
-                    <p>Versatile Developer | Tech Enthusiast</p>
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Title - My Site</title> <!-- TODO: update page title -->
+    <meta name="description" content=""> <!-- TODO: update meta description -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Home - Page"> <!-- TODO: update OG Title --> 
+    <meta property="og:url" content="">  <!-- TODO: update OG URL --> 
+    <meta property="og:image" content="/path/to/image">  <!-- TODO: update OG Image --> 
+    <meta property="og:type" content="">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="site.webmanifest"> <!-- TODO: Update web app manifest file -->
+    <link rel="icon" href="/favicon.ico"> <!-- TODO: Add favicon.ico file to project -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    <!-- Content -->
+    <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script> <!-- TODO: Add Modernizr js -->
+    <script src="js/app.js"></script> <!-- TODO: Update app entry point -->
+    
+    <div class="wrapper">
+        <div class="hero">
+        <div class="hero-i">
+            <div class="hero-t">
+                <div class="hero-1">
+                <h1>Hello, my name is Nikko</h1>
+            </div>
+                <div class="hero-2">
+                <h2 class="hero-h2">Versatile Developer | Tech Enthusiast</p>
+                    </div>
+                <div class="hero-3">
                     <a href="#portfolio" class="cta-button">View my work</a>
+    
                 </div>
             </div>
         </div>
-        
-        <script src="" async defer></script>
-    </body>
+        <div class="about">
+            <section id="portfolio">
+                <header>
+                    <h2>About</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
 </html>
