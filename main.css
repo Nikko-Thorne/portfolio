@@ -72,23 +72,51 @@ html {
   justify-content: center;
   align-items: center;
   align-content: center;
-
   height: 100vh;
   width: 100vw;
+
+}
+
+.hero-h1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-p-1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
   color: white;
+}
+
+.title-name {
+  margin-left: 10px;
+  color: #e20126;
 }
 
 .hero-h2 {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: white;
 }
 
 .cta-button {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #e20126;
+  outline: 2px solid #e20126;
+  outline-offset: 10px;
 }
 
-canvas {
+.cta-button:hover {
+  color: #e20126;
+}
+
+.canvas {
   /*fill with electro magnet orb*/
+  background-color: black;
 }
