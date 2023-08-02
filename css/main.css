@@ -1,61 +1,6 @@
-/* CSS Reset */
 
-/* Remove default margins and paddings */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
 
-/* Remove default list styles */
-ul,
-ol {
-  list-style: none;
-}
 
-/* Remove underline from anchor links */
-a {
-  text-decoration: none;
-}
-
-/* Set default box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
-
-/* Set base font size and line-height */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Optionally, you can apply a global reset for all elements */
-/*
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-*/
-
-/* Add your custom styles and overrides below */
-/* ... */
-
-body,
 html {
   height: 100%;
   width: auto;
@@ -82,6 +27,17 @@ html {
   width: 100vw;
   overflow: hidden;
 }
+
+canvas#plasma {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .hero-heading {
   display: flex;
   flex-direction: column;
