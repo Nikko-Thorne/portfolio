@@ -1,5 +1,5 @@
-let canvas = document.getElementById("plasma");
-let ctx = canvas.getContext("2d");
+const canvas = document.getElementById("plasma");
+const ctx = canvas.getContext("2d");
 
 let mouse = {
   x: null,
