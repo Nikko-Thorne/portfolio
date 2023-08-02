@@ -65,8 +65,24 @@ html {
 .wrapper {
   background-color: black;
 }
+.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
 
-.hero-t {
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.hero-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,7 +132,3 @@ html {
   color: #e20126;
 }
 
-.canvas {
-  /*fill with electro magnet orb*/
-  background-color: black;
-}
