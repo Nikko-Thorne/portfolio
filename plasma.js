@@ -10,7 +10,7 @@ let mouseX = null;
 let mouseY = null;
 
 const particles = [];
-const particleCount = 10;
+const particleCount = 20;
 
 // Create particles
 for (let i = 0; i < particleCount; i++) {
@@ -69,11 +69,9 @@ function drawParticles() {
 function drawPlasmaOrb() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawParticles();
-  for (let i = 0; i < 5; i++) {
-    const targetParticle =
-      particles[Math.floor(Math.random() * particles.length)]; // Select random particles to shock
+  particles.forEach((targetParticle) => {
     drawLightning(centerX, centerY, targetParticle.x, targetParticle.y, 10);
-  }
+  });
 }
 
 function animate() {

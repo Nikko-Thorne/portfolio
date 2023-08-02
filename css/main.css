@@ -15,7 +15,7 @@ html {
   display: flex;
   height: 100vh;
   width: 100vw;
-  z-index: 999;
+  z-index: 1;
 }
 
 .canvas {
@@ -26,12 +26,14 @@ html {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: 0;
 }
 
 canvas#plasma {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: 0;
 }
 
 .hero-heading {
@@ -42,7 +44,7 @@ canvas#plasma {
   align-content: center;
   height: 100vh;
   width: 100vw;
-
+  z-index: 1;
 }
 
 .hero-h1 {
