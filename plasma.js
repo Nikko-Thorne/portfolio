@@ -10,7 +10,7 @@ let mouseX = null;
 let mouseY = null;
 
 const particles = [];
-const particleCount = 20;
+const particleCount = 30;
 
 // Create particles
 for (let i = 0; i < particleCount; i++) {
@@ -30,15 +30,25 @@ window.addEventListener("mousemove", (e) => {
 function drawLightning(x1, y1, x2, y2, segments) {
   ctx.beginPath();
   ctx.moveTo(x1, y1);
+
+  let previousOffset = 0;
+
+  const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
+  gradient.addColorStop(0, "rgba(255, 255, 255, 0.5)");
+  gradient.addColorStop(1, "rgba(0, 0, 139, 0.5)");
+
   for (let i = 0; i < segments; i++) {
     const t = i / segments;
     const xt = x1 + (x2 - x1) * t;
     const yt = y1 + (y2 - y1) * t;
-    const variance = (1 - t) * (Math.random() * 20 - 10);
+
+    const variance = Math.random() * 30 - 15 + previousOffset;
+    previousOffset = variance * -0.5;
+
     ctx.lineTo(xt + variance, yt + variance);
   }
   ctx.lineTo(x2, y2);
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.strokeStyle = gradient;
   ctx.lineWidth = 2;
   ctx.stroke();
 }
