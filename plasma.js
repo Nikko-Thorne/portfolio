@@ -47,13 +47,13 @@ function drawLightning(x1, y1, x2, y2, segments) {
     ctx.lineTo(xt + offsetX, yt + offsetY);
   }
   ctx.lineTo(x2, y2);
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.strokeStyle = "rgba(255, 0, 0, 0.2)";
   ctx.lineWidth = 3;
   ctx.stroke();
 
   // Additional drawing to give a 'glow' effect
-  ctx.strokeStyle = "rgba(173, 216, 230, 0.3)"; // Light blue color
-  ctx.lineWidth = 8;
+  ctx.strokeStyle = "rgba(137, 239, 255, 0.65)"; // Light purple color
+  ctx.lineWidth = 2;
   ctx.stroke();
 }
 
