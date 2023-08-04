@@ -1,6 +1,17 @@
 const canvas = document.getElementById("plasma");
 const ctx = canvas.getContext("2d");
 
+canvas.addEventListener("mousemove", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  mouseX = e.clientX - rect.left;
+  mouseY = e.clientY - rect.top;
+});
+
+canvas.addEventListener("mouseout", () => {
+  mouseX = null;
+  mouseY = null;
+});
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -21,11 +32,6 @@ for (let i = 0; i < particleCount; i++) {
     speedY: 0,
   });
 }
-
-window.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
 
 function drawLightning(x1, y1, x2, y2, segments) {
   ctx.beginPath();

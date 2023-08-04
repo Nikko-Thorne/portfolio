@@ -36,15 +36,26 @@ canvas#plasma {
   z-index: 0;
 }
 
+.hero-i {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  margin-left: 25%;
+  height: 50vh;
+  width:  50vw;
+  z-index: 1;
+
+}
+
 .hero-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
+  height: 50vh;
+  width: 50vw;
 }
 
 .hero-h1 {
