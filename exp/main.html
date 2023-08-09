@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma Orb Effect</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { background-color: #000; display: block; }
+    </style>
+</head>
+<body>
+    <canvas id="plasmaOrb"></canvas>
+    <script>
+        const canvas = document.getElementById('plasmaOrb');
+        const ctx = canvas.getContext('2d');
+
+        // Resize canvas to fill the window
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Central Sphere details
+        const center = { x: canvas.width / 2, y: canvas.height / 4 };
+        const centralSphereRadius = 50;
+
+        function drawCentralSphere() {
+            ctx.beginPath();
+            ctx.arc(center.x, center.y, centralSphereRadius, 0, Math.PI * 2);
+            ctx.fillStyle = 'silver';
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawPlasmaTendril() {
+    ctx.beginPath();
+    ctx.moveTo(center.x, center.y);
+    
+    // Create a gradient for the plasma arc
+    let gradient = ctx.createLinearGradient(center.x, center.y, center.x + (Math.random() - 0.5) * 300, center.y + (Math.random() - 0.5) * 300);
+    gradient.addColorStop(0, 'purple');
+    gradient.addColorStop(0.5, 'blue');
+    gradient.addColorStop(1, 'pink');
+
+    // Multiple Bezier curves for a more erratic appearance
+    let currentX = center.x;
+    let currentY = center.y;
+    for (let j = 0; j < 3; j++) {
+        let cp1x = currentX + (Math.random() - 0.5) * 100;
+        let cp1y = currentY + (Math.random() - 0.5) * 100;
+        let cp2x = currentX + (Math.random() - 0.5) * 100;
+        let cp2y = currentY + (Math.random() - 0.5) * 100;
+        let endX = currentX + (Math.random() - 0.5) * 100;
+        let endY = currentY + (Math.random() - 0.5) * 100;
+
+        ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, endX, endY);
+
+        currentX = endX;
+        currentY = endY;
+    }
+
+    ctx.strokeStyle = gradient;
+    ctx.lineWidth = 2 + Math.random() * 2; // Varying the line width
+    ctx.stroke();
+    ctx.closePath();
+}
+
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawCentralSphere();
+            for(let i = 0; i < 10; i++) {
+                drawPlasmaTendril();
+            }
+            setTimeout(() => {
+                requestAnimationFrame(animate);
+            }, 5.55); // Introducing a delay of 5.55 milliseconds
+        }
+
+        animate();
+    </script>
+</body>
+</html>

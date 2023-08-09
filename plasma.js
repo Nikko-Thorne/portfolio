@@ -97,7 +97,7 @@ function drawPlasmaOrb() {
   // Only draw if mouse coordinates are available
   if (mouseX && mouseY) {
     // Draw central plasma orb at mouse position
-    ctx.fillStyle = "rgba(173, 216, 230, 0.8)"; // Light blue color
+    ctx.fillStyle = "rgba(173, 216, 230, 1)"; // Light blue color
     ctx.beginPath();
     ctx.arc(mouseX, mouseY, 20, 0, Math.PI * 2);
     ctx.fill();
