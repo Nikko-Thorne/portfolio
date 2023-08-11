@@ -12,8 +12,8 @@
     <!--<link rel="apple-touch-icon" href="icon.png"> -->
     <!--<link rel="manifest" href="site.webmanifest">  TODO: Update web app manifest file -->
     <!--<link rel="icon" href="/favicon.ico">  TODO: Add favicon.ico file to project -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
     <meta name="theme-color" content="#fafafa">
 </head>
 <body>
@@ -25,7 +25,8 @@
         
         <div class="hero">
             <div class="canvas">
-                <canvas id="plasma"></canvas>
+                <canvas id="plasma">
+                </canvas>
             </div>
             <div class="hero-i">
             <div class="hero-heading">
@@ -52,11 +53,15 @@
             </section>
         </div>
     </div>
+
+
     <script>
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
     </script>
-    <script src="plasma.js"></script>
-    <!--<script src="https://www.google-analytics.com/analytics.js" async></script> -->
+    <script src="../js/canvas.js"></script>
+    
+    <!-- <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+
 </body>
 </html>
