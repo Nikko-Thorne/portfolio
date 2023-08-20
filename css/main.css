@@ -29,11 +29,15 @@ html {
   z-index: 0;
 }
 
-canvas#plasma {
+.particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .hero-i {
@@ -97,3 +101,14 @@ canvas#plasma {
   color: #e20126;
 }
 
+#portfolio {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
