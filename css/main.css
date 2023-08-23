@@ -1,13 +1,13 @@
 
 
 
-html {
-  height: 100%;
-  width: auto;
-  background-color: black;
-}
+
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  width: 100vw;
   background-color: black;
 }
 .hero {
@@ -29,7 +29,7 @@ html {
   z-index: 0;
 }
 
-.particleCanvas {
+canvas#particleCanvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@ html {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-i {
@@ -49,7 +49,16 @@ html {
   height: 50vh;
   width:  50vw;
   z-index: 1;
+  position: relative;
+}
 
+.hero-i:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 10px solid rgb(0, 0, 0);
+  border-color: black;
+  border-radius: 30px;
+  transition: 0.5s;
+  
 }
 
 .hero-heading {
@@ -101,7 +110,7 @@ html {
   color: #e20126;
 }
 
-#portfolio {
+.about {
   margin-top: auto;
   display: flex;
   flex-direction: column;
@@ -110,5 +119,5 @@ html {
   align-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: white;
 }
