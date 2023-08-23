@@ -9,6 +9,7 @@
   height: 200vh;
   width: 100vw;
   background-color: black;
+  gap: 1rem;
 }
 .hero {
   position: relative;
@@ -91,7 +92,6 @@ canvas#particleCanvas {
 .hero-h2 {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
   font-size: 2rem;
   color: white;
 }
@@ -110,14 +110,34 @@ canvas#particleCanvas {
   color: #e20126;
 }
 
-.about {
-  margin-top: auto;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: start;
+  height: 10vh;
+  width: 100vw;
+  background-color: grey;
+  position: sticky;
+  top: 0;
+  margin-top: 150px;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; 
+  margin-left: 20px;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
+  color: white;
 }
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav ul li a.nav-about {
+  color: red !important;
+}
+
