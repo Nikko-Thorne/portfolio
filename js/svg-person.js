@@ -26,11 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Call the playSVGAnimation function
     playSVGAnimation();
   });
-
-  console.log(refreshLink); // Should log the anchor element with href='#about'
-  console.log(svgContainer); // Should log the div with class 'about-svg'
-  console.log(SVGElement); // This might not work as expected unless SVGElement is defined elsewhere in your code
-  console.log(__Animations["405942"]); // Should log the SVG animation object
-  console.log(OnlineWebFonts_Com); // Should log the OnlineWebFonts_Com function
-  console.log(playSVGAnimation); // Should log the playSVGAnimation function
 });
