@@ -9,10 +9,10 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  gap: 50px;
   width: 100vw;
   background-color: black;
-  gap: 1rem;
+  gap: 1px;
 }
 .hero {
   position: relative;
@@ -117,11 +117,10 @@ nav {
   display: flex;
   justify-content: start;
   height: 4rem;
-  width: 100vw;
-  background-color: rgba(59, 59, 59, 0.226);
+  background-color: rgba(37, 36, 36, 0.329);
   position: sticky;
   top: 0;
-
+  z-index: 2;
 }
 
 .nav ul {
@@ -144,3 +143,65 @@ nav {
   color: red !important;
 }
 
+.wrapper-2 {
+  display: flex;
+  align-self: center;
+  justify-self: center;  
+  flex-direction: column;
+  width: 90vw;
+}
+
+.about, .projects, .contact {
+  background-color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.about {
+  color: white;
+}
+
+section#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 2rem;
+  margin-top: 100px;
+}
+
+.about-container {
+  display: flex;
+  height: auto;
+  margin-top: 5%;
+}
+
+.about-left, .about-right {
+flex: 1;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.about-text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 15px;
+}
+
+svg {
+  height: 250px;
+  width: 250px;
+}
