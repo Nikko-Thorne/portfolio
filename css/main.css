@@ -5,11 +5,15 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  height: auto;
   width: 100vw;
   background-color: black;
   gap: 1px;
@@ -155,6 +159,7 @@ nav {
   background-color: black;
   position: relative;
   z-index: 1;
+  padding-top: 4rem;
 }
 
 .about {
