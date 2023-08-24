@@ -1,6 +1,9 @@
 
 
-
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
 
 .wrapper {
@@ -113,12 +116,12 @@ canvas#particleCanvas {
 nav {
   display: flex;
   justify-content: start;
-  height: 10vh;
+  height: 4rem;
   width: 100vw;
-  background-color: grey;
+  background-color: rgba(59, 59, 59, 0.226);
   position: sticky;
   top: 0;
-  margin-top: 150px;
+
 }
 
 .nav ul {
