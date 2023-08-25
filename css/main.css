@@ -204,11 +204,12 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 gap: 10px;
+width: 80%;
 }
 
 svg {
-height: 250px;
-width: 250px;
+height: 200px;
+width: 200px;
 }
 
 .about-right {
@@ -275,4 +276,22 @@ ar.react {
   grid-area: mongoDB;
 }
 
+.projects {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
 
+.projects-container {
+  display: flex;
+  color: white;
+}
+
+.project-left {
+  background-color: black;
+}
+
+.project-right {
+  background-color: black;
+}
