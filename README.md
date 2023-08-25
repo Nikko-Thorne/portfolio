@@ -1,1 +1,1 @@
-# portfolio for Nikko Thorne
+# Portfolio for Nikko Thorne
