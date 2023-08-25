@@ -178,7 +178,7 @@ section#about {
   align-items: center;
   align-content: center;
   font-size: 2rem;
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 .about-container {
@@ -203,7 +203,7 @@ flex: 1;
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 15px;
+gap: 10px;
 }
 
 svg {
@@ -217,15 +217,62 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: auto;
 justify-items: center;
 align-items: center;
+grid-template-areas: 
+"java html git"
+"react css mysql"
+"python js google"
+"mongoDB mongoDB mongoDB";
 }
 
-.ar-css, .ar-html, .ar-js, .ar-react, .ar-node, .ar-mongoDB, .ar-git, .ar-java, .ar-google, .ar-mysql, .ar-python {
+.ar-css, .ar-html, .ar-js, .ar-react, .ar-mongoDB, .ar-git, .ar-java, .ar-google, .ar-mysql, .ar-python {
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 align-content: center;
 gap: 10px;
-height: 50px;
-width: 50px;
+height: 60px;
+width: 60px;
 }
+
+.ar-css {
+  grid-area: css;
+}
+
+ar.html {
+  grid-area: html;
+}
+
+ar.js {
+  grid-area: js;
+}
+
+ar.react {
+  grid-area: react;
+}
+
+.ar-git {
+  grid-area: git;
+}
+
+.ar-java {
+  grid-area: java;
+}
+
+.ar-google {
+  grid-area: google;
+}
+
+.ar-mysql {
+  grid-area: mysql;
+}
+
+.ar-python {
+  grid-area: python;
+}
+
+.ar-mongoDB {
+  grid-area: mongoDB;
+}
+
+
