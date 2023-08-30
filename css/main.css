@@ -119,12 +119,14 @@ canvas#particleCanvas {
 
 nav {
   display: flex;
-  justify-content: start;
   height: 4rem;
+  width: 100vw;
   background-color: rgba(37, 36, 36, 0.329);
   position: sticky;
+  left: 0;
   top: 0;
   z-index: 2;
+
 }
 
 .nav ul {
@@ -177,7 +179,7 @@ section#about {
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 75px;
 }
 
@@ -286,6 +288,7 @@ ar.react {
 .projects-container {
   display: flex;
   color: white;
+  margin-top: 150px;
 }
 
 .project-left {
@@ -294,4 +297,30 @@ ar.react {
 
 .project-right {
   background-color: black;
+}
+
+.projects h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.etch-a-sketch-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.etch-a-sketch-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
 }
