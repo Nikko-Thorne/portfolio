@@ -296,7 +296,11 @@ ar.react {
 }
 
 .project-left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
   background-color: black;
+
 }
 
 .project-right {
@@ -318,6 +322,7 @@ ar.react {
   justify-content: center;
   align-items: center;
   align-content: center;
+  row-gap: 1000px;
 }
 
 .etch-a-sketch-right {
@@ -327,4 +332,24 @@ ar.react {
   align-items: center;
   align-content: center;
 
+}
+
+.placeholder-iframe {
+  width: 800px;
+  height: 700px;
+  background-color: aliceblue;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.placeholder-contact-iframe {
+  width: 800px;
+  height: 700px;
+  background-color: aliceblue;
 }
