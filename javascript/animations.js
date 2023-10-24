@@ -247,11 +247,6 @@ window.OnlineWebFonts_Animations =
               (t.Dom = t.Div.children[0].childNodes),
               this
             );
-            var n = document.createElementNS(
-              "http://www.w3.org/2000/svg",
-              "path"
-            );
-            return n.setAttribute("d", t), Math.ceil(n.getTotalLength());
           },
           SVGElement: function (t) {
             var n = document.createElementNS(
@@ -262,7 +257,6 @@ window.OnlineWebFonts_Animations =
             var e = this.Config.Data.Box.Width,
               i = this.Config.Data.Box.Height;
             return n.setAttribute("viewBox", "0 0 " + e + " " + i), n;
-          },
           },
           GetPathDuration: function (t) {
             var n = document.createElementNS(
@@ -469,46 +463,89 @@ window.OnlineWebFonts_Com =
   function (t) {
     return new OnlineWebFonts_Animations(t);
   };
-if (typeof Object.assign != "function") {
-  Object.assign = function (e) {
-    e = Object(e);
-    for (var i = 1; i < arguments.length; i++) {
-      var s = arguments[i];
-      if (s != null) {
-        for (var k in s) {
-          if (Object.prototype.hasOwnProperty.call(s, k)) {
-            e[k] = s[k];
-          }
-        }
-      }
-    }
-    return e;
-  };
-}
-window.__Animations = Object.assign(window.__Animations || {}, {
-  405942: {
-    Line: [
+if (window.OnlineWebFonts) {
+  var svgCss = {
+    box: {
+      width: 300,
+      height: 300,
+      color: "#000000",
+    },
+    line: [
       {
-        Duration: "1437",
-        Width: "3",
-        Color: "#e5e2e2",
-        Path: "M128,10C62.8,10,10,62.8,10,128c0,65.2,52.8,118,118,118c65.2,0,118-52.8,118-118C246,62.8,193.2,10,128,10z M128,238.6c-61.1,0-110.6-49.5-110.6-110.6C17.4,66.9,66.9,17.4,128,17.4c61.1,0,110.6,49.5,110.6,110.6C238.6,189.1,189.1,238.6,128,238.6z",
-      },
-      {
-        Duration: "750",
-        Width: "3",
-        Color: "#ff0707",
-        Path: "M153.8,129.9c9-7.4,14.7-18.7,14.7-31.3c0-22.4-18.2-40.6-40.6-40.6c-22.4,0-40.6,18.2-40.6,40.6c0,12.6,5.7,23.8,14.7,31.3c-21.7,9.8-36.9,31.7-36.9,57.1c0,2,1.7,3.7,3.7,3.7s3.7-1.6,3.7-3.7c0-24.2,15.5-44.6,37.1-52.2c5.5,2.8,11.7,4.4,18.3,4.4s12.8-1.6,18.3-4.4c21.6,7.6,37.1,28,37.1,52.2c0,2,1.6,3.7,3.7,3.7s3.7-1.6,3.7-3.7C190.7,161.5,175.6,139.7,153.8,129.9z M94.8,98.6c0-18.3,14.9-33.2,33.2-33.2s33.2,14.9,33.2,33.2c0,17.8-14,32.3-31.6,33.1c-0.5,0-1.1-0.1-1.6-0.1s-1.1,0-1.6,0.1C108.8,130.8,94.8,116.4,94.8,98.6z",
+        path: "M 0 0 L 100 0 L 100 100 L 0 100 Z",
+        color: "#000000",
+        width: 3,
+        duration: 0,
       },
     ],
-    Box: { Width: "256", Height: "256" },
-    Config: {
-      Width: "3",
-      Opacity: "1",
-      Sequential: false,
-      Animate: "Linear",
+    animate: {
+      Opacity: 1,
+      Width: 3,
+      Sequential: 0,
       Color: "#000000",
-      Reverse: false,
+      Animate: "Linear",
     },
-  },
-});
+    font: {
+      family: "Open Sans, sans-serif",
+      style: "normal",
+      variant: "normal",
+      weight: "400",
+      size: 16,
+    },
+    Top: 100,
+    Display: !0,
+  };
+  var font = {
+    License: "URL",
+    Category: "Sans",
+    Version: "Version 1.001;URL;myfonts.com",
+    AAT: 0,
+    OS2: 1,
+    Symbol: 0,
+    unicode: !0,
+    Width: 5,
+    Family: "Open Sans, sans-serif",
+  };
+  if (window.OnlineWebFonts && OnlineWebFonts.Run) {
+    var m,
+      svg = new OnlineWebFonts_Com({
+        Id: "115456",
+        Data: {
+          Config: {
+            Sequential: svgCss.animate.Sequential,
+            Color: svgCss.animate.Color,
+            Width: svgCss.animate.Width,
+            Animate: svgCss.animate.Animate,
+            An: 1,
+          },
+          Box: {
+            Width: svgCss.box.width,
+            Height: svgCss.box.height,
+          },
+          Line: {},
+        },
+      });
+    for (m = 0; m < svgCss.line.length; m++) {
+      var style = svgCss.line[m];
+      if (style && style.path) {
+        var id = svg.AddPath(style.path, style.width, style.color);
+        id && (svg.Line[id].Duration = style.duration);
+      }
+    }
+    font.Status && svg.Status(font.Status),
+      font.Complete && svg.Complete(font.Complete),
+      svg.Run({
+        Data: {
+          Config: {
+            Width: 2,
+            Opacity: 1,
+            StrokeDot: !0,
+            Sequential: 0,
+            Color: svgCss.box.color,
+            Animate: "Linear",
+          },
+        },
+        Line: {},
+      });
+  }
+}

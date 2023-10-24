@@ -4,6 +4,32 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Define a variable to store the mouse position
+const mouse = {
+  x: undefined,
+  y: undefined,
+};
+
+// Add an event listener to track mouse movement
+canvas.addEventListener("mousemove", (event) => {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+
+// Add an event listener to track window resizing
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  createFireflies();
+});
+
+// Add an event listener to track mouse movement
+canvas.addEventListener("mousemove", (event) => {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+
 const fireflies = [];
 
 class Firefly {
