@@ -239,12 +239,30 @@ window.OnlineWebFonts_Animations =
                     (r = parseInt(n.Line[a].Duration));
             }
             return (
-              (e.Time.Data.Total = r),
-              (t.Div = document.querySelector(t.Id)),
+              t.Div.appendChild(i),
+              (t.Dom = t.Div.children[0].childNodes),
+              t.Div.appendChild(i),
+              (t.Dom = t.Div.children[0].childNodes),
               t.Div.appendChild(i),
               (t.Dom = t.Div.children[0].childNodes),
               this
             );
+            var n = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path"
+            );
+            return n.setAttribute("d", t), Math.ceil(n.getTotalLength());
+          },
+          SVGElement: function (t) {
+            var n = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg"
+            );
+            n.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+            var e = this.Config.Data.Box.Width,
+              i = this.Config.Data.Box.Height;
+            return n.setAttribute("viewBox", "0 0 " + e + " " + i), n;
+          },
           },
           GetPathDuration: function (t) {
             var n = document.createElementNS(
