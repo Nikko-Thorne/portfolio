@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navList = document.querySelector(".nav-list");
 
   function updateActiveNavLink() {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section, .hero#home");
     const navbarHeight = document.querySelector("nav").offsetHeight;
     let foundActive = false;
 
