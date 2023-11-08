@@ -22,10 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Listen for scroll event and update active link
-  window.addEventListener("scroll", updateActiveNavLink);
-  console.log("scroll");
-
   // Update active link on page load
   updateActiveNavLink();
 });
