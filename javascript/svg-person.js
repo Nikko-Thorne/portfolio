@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   // Select the anchor element with attribute href='#about'
   const refreshLink = document.querySelector(".click-about");
   // Select the element with class 'about-svg' which contains the SVG

@@ -205,6 +205,10 @@ flex: 1;
   align-content: center;
 }
 
+.about-svg {
+  color: rgb(255, 38, 0);
+}
+
 .about-text {
 display: flex;
 flex-direction: column;
