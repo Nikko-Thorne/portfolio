@@ -89,8 +89,6 @@ function createFireflies() {
     let color_g = Math.floor(Math.random() * 255);
     let color_b = Math.floor(Math.random() * 255);
     let color_a = Math.random() * 0.5 + 0.5;
-    console.log(color_r, color_g, color_b, color_a);
-    console.log(color_a);
     const color = `rgba(${color_r}, ${color_g}, ${color_b}, ${color_a})`;
 
     fireflies.push(new Firefly(x, y, radius, color));
