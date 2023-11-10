@@ -1,36 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-list li a");
-  const navList = document.querySelector(".nav-list");
+  const sections = document.querySelectorAll("section, .hero#home");
 
   function updateActiveNavLink() {
-    const sections = document.querySelectorAll("section, .hero#home");
     const viewportHeight = window.innerHeight;
-    let sectionFound = false;
-
-    // Set the "home" button to active by default
-    navLinks[0].classList.add("active");
+    let topSectionIndex = null;
 
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
 
-      // Register the section as active when the bottom passes the bottom of the viewport
-      if (!sectionFound && rect.bottom >= viewportHeight && rect.top < viewportHeight) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        navLinks[index].classList.add("active");
-        sectionFound = true;
+      // We are looking for the section that is closest to the top without going above it
+      if (rect.top >= 0 && (topSectionIndex === null || rect.top < sections[topSectionIndex].getBoundingClientRect().top)) {
+        topSectionIndex = index;
       }
     });
 
-    // If no sections are active, default to the "home" section
-    if (!sectionFound) {
-      navLinks.forEach((link) => link.classList.remove("active"));
-      navLinks[0].classList.add("active");
-    }
+    navLinks.forEach((link, index) => {
+      link.classList.toggle("active", index === topSectionIndex);
+    });
   }
 
-  // Update active link on page load
-  updateActiveNavLink();
+  // Set the "home" button as active upon initial load if the page starts at the top
+  if (window.scrollY === 0) {
+    navLinks[0].classList.add("active");
+  }
 
-  // Add a scroll event listener to update the active link as the user scrolls
+  // Update the active nav link upon scrolling
   document.addEventListener('scroll', updateActiveNavLink);
+
+  // Call the function on page load to set the correct active link
+  updateActiveNavLink();
 });
