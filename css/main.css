@@ -166,10 +166,14 @@ nav {
   position: relative;
   z-index: 1;
   padding-top: 4rem;
+  color: white;
 }
 
-.about {
-  color: white;
+.about h2, .projects h2, .contact h2 {
+  background: linear-gradient(90deg, #e20126 50%, #000000 60%, #e20126 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: quit;
 }
 
 section#about {
