@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-list li a");
-  const sections = document.querySelectorAll("section, .hero#home");
+  const sections = document.querySelectorAll(".hero#home, section");
 
   function updateActiveNavLink() {
     const viewportHeight = window.innerHeight;
@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
 
-      // We are looking for the section that is closest to the top without going above it
-      if (rect.top >= 0 && (topSectionIndex === null || rect.top < sections[topSectionIndex].getBoundingClientRect().top)) {
+      // Adjust this value to change when the nav link becomes active
+      // For example, setting it to 0.5 would mean the middle of the section needs to reach the top of the viewport
+      const activationThreshold = 0.5; 
+
+      // Check if the section has reached the activation threshold
+      if (rect.top <= viewportHeight * activationThreshold && rect.bottom > viewportHeight * activationThreshold) {
         topSectionIndex = index;
       }
     });
