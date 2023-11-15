@@ -239,12 +239,14 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: auto;
 justify-items: center;
 align-items: center;
+margin-top: 300px;
 grid-template-areas: 
-"express express express"
-"java html git"
-"react css mysql"
-"python js google"
-"mongoDB mongoDB mongoDB";
+"python python python"
+"html express git"
+"css js mysql"
+"react java google"
+"mongoDB mongoDB mongoDB"
+;
 }
 
 .ar-express,.ar-css, .ar-html, .ar-js, .ar-react, .ar-mongoDB, .ar-git, .ar-java, .ar-google, .ar-mysql, .ar-python {
@@ -259,9 +261,7 @@ width: 60px;
 }
 
 .ar-express {
-  grid-area: express;
-  height: 100px;
-width: 100px;
+grid-area: express;
 }
 
 .ar-css {
@@ -305,7 +305,7 @@ ar.react {
 }
 
 .projects {
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   color: white;
