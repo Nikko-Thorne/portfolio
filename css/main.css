@@ -406,12 +406,13 @@ header#header-contact {
 }
 
 .placeholder-contact-iframe {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 800px;
   height: 700px;
   background-color: aliceblue;
+
 }
 
 .contact-left-container {
@@ -419,4 +420,8 @@ header#header-contact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+div.placeholder {
+  display: none;;
 }
