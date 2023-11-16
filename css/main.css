@@ -87,7 +87,7 @@ canvas#particleCanvas {
 .hero-p-1 {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 3rem;
   color: white;
 }
 
@@ -99,22 +99,53 @@ canvas#particleCanvas {
 .hero-h2 {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
 }
 
-.cta-button {
+a.cta-button {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #e20126;
   outline: 2px solid #e20126;
   outline-offset: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.cta-button:hover {
-  color: #e20126;
+img#down-arrow-svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+a.cta-button:hover::after {
+  content: "";
+  background: #e20126;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 200%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 nav {
@@ -239,7 +270,7 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: auto;
 justify-items: center;
 align-items: center;
-margin-top: 300px;
+margin-top: 25px;
 grid-template-areas: 
 "python python python"
 "html express git"
