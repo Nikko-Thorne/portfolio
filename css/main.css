@@ -425,23 +425,12 @@ header#header-contact {
 
 }
 
-.placeholder-contact-iframe {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 800px;
-  height: 700px;
-  background-color: aliceblue;
-
-}
-
-.contact-left-container {
+.contact-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-div.placeholder {
-  display: none;
+img#my-git {
+  width: 60px;
+  height: 60px;
 }
