@@ -200,7 +200,7 @@ nav {
   width: 90vw;
 }
 
-.about, .projects, .contact {
+.about, .projects, .contact h2 {
   background-color: black;
   position: relative;
   z-index: 1;
@@ -415,14 +415,13 @@ ar.react {
 .placeholder-iframe {
   width: 800px;
   height: 700px;
-  background-color: aliceblue;
 }
 
 header#header-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: 200px;
 }
 
 .contact-container {

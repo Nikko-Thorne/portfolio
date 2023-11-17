@@ -3,23 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".hero#home, section");
 
   function updateActiveNavLink() {
+    const scrollPosition = window.scrollY;
     const viewportHeight = window.innerHeight;
+    const totalPageHeight = document.body.scrollHeight;
     let topSectionIndex = null;
+
+    // Detect if the user is at the bottom of the page
+    const isAtBottom = (scrollPosition + viewportHeight) >= totalPageHeight;
 
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
+      const activationThreshold = 0.5; // The threshold of the section where the link becomes active
 
-      // Adjust this value to change when the nav link becomes active
-      // For example, setting it to 0.5 would mean the middle of the section needs to reach the top of the viewport
-      const activationThreshold = 0.5; 
-
-      // Check if the section has reached the activation threshold
-      if (rect.top <= viewportHeight * activationThreshold && rect.bottom > viewportHeight * activationThreshold) {
+      if (isAtBottom) {
+        // If the user is at the bottom, the last link (presumably for the contact section) should be active
+        topSectionIndex = navLinks.length - 1;
+      } else if (rect.top <= viewportHeight * activationThreshold && rect.bottom > viewportHeight * activationThreshold) {
+        // Otherwise, check each section to see if it meets the criteria to become active
         topSectionIndex = index;
       }
     });
 
     navLinks.forEach((link, index) => {
+      // Add 'active' class to the nav link that corresponds to the active section or to the last link if we're at the bottom
       link.classList.toggle("active", index === topSectionIndex);
     });
   }
