@@ -381,6 +381,7 @@ ar.react {
 
 
 .project-right {
+  display: flex;
   background-color: black;
 
 }
@@ -410,11 +411,6 @@ ar.react {
   align-items: center;
   align-content: center;
 
-}
-
-.placeholder-iframe {
-  width: 800px;
-  height: 700px;
 }
 
 header#header-contact {
