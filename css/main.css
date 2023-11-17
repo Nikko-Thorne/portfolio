@@ -434,4 +434,5 @@ header#header-contact {
 img#my-git {
   width: 60px;
   height: 60px;
+  border-radius: 25%;
 }
