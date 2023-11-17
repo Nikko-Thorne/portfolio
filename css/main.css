@@ -187,7 +187,10 @@ nav {
   color: red; 
 }
   
-
+.wrapper-3 {
+  display: flex;
+  justify-content: center;
+}
 
 .wrapper-2 {
   display: flex;
@@ -351,18 +354,35 @@ ar.react {
   display: flex;
   color: white;
   margin-top: 150px;
+  gap: 100px;
 }
 
 .project-left {
   display: flex;
   flex-direction: column;
   row-gap: 100px;
-  background-color: black;
-
+  position: relative;
+  z-index: 1;
 }
+
+.project-left::before {
+  content: "";
+  padding: 10px;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(90deg, #79091b 50%, #000000 60%, #79091b 0%);
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+}
+
+
 
 .project-right {
   background-color: black;
+
 }
 
 .projects h2 {
@@ -423,5 +443,5 @@ header#header-contact {
 }
 
 div.placeholder {
-  display: none;;
+  display: none;
 }
