@@ -66,6 +66,7 @@ canvas#particleCanvas {
   border-color: black;
   border-radius: 30px;
   transition: 0.5s;
+  flex-direction: column;
   
 }
 
@@ -136,22 +137,6 @@ a.cta-button:hover::after {
   animation: pulse 1.5s infinite;
   z-index: 1; 
 }
-
-
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(1); 
-    opacity: 0.7; 
-  }
-  100% {
-    opacity: 0; 
-  }
-}
-
 
 nav {
   display: flex;
